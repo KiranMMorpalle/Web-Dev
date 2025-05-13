@@ -1,0 +1,28 @@
+=> Demo Lecture :
+
+1. Basic html format
+2. heading tags
+3. paragraph tag
+
+
+=> css types :
+1. inline 
+2. internal 
+3. external
+
+
+=> image tag :
+-src
+-alt
+-width
+-height
+
+=> comment types
+1. /**/
+2. <!--kkk--> 
+
+
+=> Color Type :
+1. name
+2. hexadecimal value
+3. RGB 
