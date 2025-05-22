@@ -1,0 +1,64 @@
+=> Style types (using)
+tag   -
+id    -
+class -
+---------------------------------------------------------------------------
+
+=> ins & del tag
+
+ins - insert 
+del - delete 
+-----------------------------------
+
+=> sub & sup ( subscript & superscript )
+
+sub - H2O
+sup - N^2
+
+-----------------------------------------
+
+=> Small tag 
+
+original -
+small    - 
+big      -
+------------------------------------------
+=> Quartation tag
+
+"Welcome"
+<q>Welcome</q>  
+<q>"Welcome"</q>  
+---------------------------------------------------------------------------------------------
+
+=> list
+
+[1] ordered   - <ol></ol>-----------------<ol type="I-A-a-1">   || style=> list-type
+[2] unordered - <ul></ul>-----------------<ul start=1234/5678--ABCD/PQRS>
+                                      <ul type="circle / hollow">
+
+                                      <li>aaa</li> --------- list item 
+----------------------------------------
+[3] defination / discription list - 
+<dl>
+    <dt>
+        <dd></dd>
+    </dt>
+</dl>
+
+Java-FullStack
+    Duration : 5 Month
+    Fees : 32000 
+--------------------------------
+[4] NESTED LIST
+1. C Programming
+    * Duration : 2 weeks
+    * Fees : 3000
+
+2. Java Programming
+    * Duration : 2 weeks
+    * Fees : 3000
+----------------------------------------------
+
+
+
+
