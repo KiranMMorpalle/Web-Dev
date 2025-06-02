@@ -1,0 +1,26 @@
+
+
+Table :
+
+th - table head
+tr - table row
+td - table cell data
+
+<caption> - First title of table
+
+border-collapse : collapse => single line border
+-----------------------------------------------------------
+
+Attribute -border, rowspan
+Properties
+<table border="1>--------???
+
+-----------------------------------------------------------
+=> Attribute of merging table row or column :
+Merge :
+row span
+col span
+
+Complex table = rowspan + colspan
+
+

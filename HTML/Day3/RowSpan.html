@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Row Sapn</title>
+
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+
+        img{
+            height: 30px;
+            width: 30px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <center>
+        <!---------------------row span----------------------------------->
+        <h2>Row Span</h2> <hr><br>
+
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <td>Ravi</td>
+            </tr>
+
+            <tr>
+                <th rowspan="2">Phone</th>
+                <td>8805769295</td>
+            </tr>
+            <tr>
+                <td>7219739468</td>
+            </tr>
+        </table>
+
+        <!-- -----------------------column span--------------------------------- -->
+        <br>
+        <hr> <h2>Column span</h2><br>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th colspan="2">Phone</th>
+            </tr>
+
+            <tr>
+                <td>Kiran</td>
+                <td>8805769295</td>
+                <td>7219739468</td>
+            </tr>
+
+            <tr>
+                <td>Madhav</td>
+                <td colspan="2">8379092176</td>
+            </tr>
+            <tr>
+                <td>Shamal</td>
+                <td colspan="2">9011597623</td>
+            </tr>
+
+            <tr>
+                <td>Krushana</td>
+                <td>9689603184</td>
+                <!-- <td>7219739468</td> -->
+                 <td> <img src="adiyogi.jpg" alt="adiyogi"></td>
+            </tr>
+            
+        </table>
+    </center>
+
+</body>
+</html>
