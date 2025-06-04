@@ -1,0 +1,27 @@
+
+HTML      - tags & attributes
+CSS       - properties
+JQuery    - Functions
+Bootstrap - Classes
+
+position :
+    1. absolute
+    2. relative
+    3. fixed
+    4. sticky
+
+Z-index : 
+        z-index : -1;
+        z-index :  1;
+
+overflow :
+    1. hidden
+    2. scroll 
+    3. visible
+
+float :
+    1. left
+    2. right 
+
+opacity :
+    blur & clearness of color or image  (0--0.5-1)

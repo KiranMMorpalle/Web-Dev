@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+
+    <style>
+        .banner {
+        position: relative;
+        z-index: 1;
+        background: lightblue;
+        padding: 20px;
+        }
+
+        .navbar {
+        position: relative;
+        z-index: 2; /* Higher than banner */
+        }
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background: white;
+        z-index: 3; /* Ensure it appears above all */
+        }
+
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="banner">Welcome to our site!</div>
+<nav class="navbar">
+  <ul>
+    <li class="dropdown">
+      Menu
+      <ul class="dropdown-content">
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    
+</body>
+</html>

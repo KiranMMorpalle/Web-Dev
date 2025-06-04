@@ -1,0 +1,6 @@
+
+Grid :
+
+display : grid
+grid-template-area : 'abc abc'   or '. .'    => max 2 col in one row other come on next row
+grid-gap : 10px

@@ -1,0 +1,21 @@
+
+div{
+    width: 300px;
+    height: 200px;
+    background-color: aquamarine;
+    border: 2pz solid red;
+
+    overflow: scroll;
+
+    margin-bottom: 10px;
+}
+
+img{
+    width: 250px;
+    height: 200px;
+
+    float: left;
+    padding-right: 10px;
+
+    opacity: 0.7;
+}

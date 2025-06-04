@@ -1,0 +1,29 @@
+
+
+/* #a1{color: brown;}
+#b1{color: aqua;}
+
+#a2{color: orange;}
+#b2{color: blue;} */
+
+#a3{color: green;}
+#b3{color: red;}
+
+/* ------------------------- */
+
+.a2{background-color: orange;}
+.b2{
+    color: blue;
+    font-weight: bolder;
+}
+
+#a1, .a2 , #a3{
+    border: 1px solid blue;
+}
+
+/* universal selector */
+
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}

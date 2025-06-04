@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* div {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: 25px;
+    }
+
+    .circle {
+        background-color: red;
+        animation: down 2s infinite alternate;
+    }
+
+    .circle2 {
+        background-color: yellow;
+        animation: up 2s infinite alternate-reverse;
+    }
+
+    .circle3 {
+        background-color: green;
+        animation: down 2s infinite alternate;
+    }
+
+    .circle4 {
+        background-color: blue;
+        animation: up 2s infinite alternate-reverse;
+    }
+
+    .circle5 {
+        background-color: purple;
+        animation:down 2s infinite alternate;
+    }
+
+    @keyframes down {
+        0%   { transform: translateY(0); background-color: red; }
+        25%  { transform: translateY(40px); background-color: yellow; }
+        50%  { transform: translateY(80px); background-color: blue; }
+        75%  { transform: translateY(120px); background-color: green; }
+        100% { transform: translateY(160px); background-color: purple; }
+    }
+    @keyframes up {
+        0%   { transform: translateY(0); background-color: red; }
+        25%  { transform: translateY(40px); background-color: yellow; }
+        50%  { transform: translateY(80px); background-color: blue; }
+        75%  { transform: translateY(120px); background-color: green; }
+        100% { transform: translateY(160px); background-color: purple; }
+    } */
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .name{
+        animation:name 5s infinite alternate;
+    }
+    .surname{
+        animation:surname  5s infinite alternate;
+    }
+    @keyframes name {
+        0%   { transform: translate(0px,0px); }
+        10% {transform: translate(20px,20px);}
+        20%  { transform: translate(40px, 40px); }
+        30% {transform: translate(60px,60px);}
+        40%  { transform: translate(80px, 80px); }
+        50% {transform: translate(110px,110px);}
+        60%  { transform: translate(140px, 140px); }
+        70% { transform: translate(180px, 180px); }
+        85%{ transform: translate(210px,210px);}
+        100% {transform: translate(250px,250px);}
+    }
+    @keyframes surname {
+        0%   { transform: translate(-0px,0px); }
+        10% {transform: translate(-20px,20px);}
+        20%  { transform: translate(-40px, 40px); }
+        30% {transform: translate(-60px,60px);}
+        40%  { transform: translate(-80px, 80px); }
+        50% {transform: translate(-110px,110px);}
+        60%  { transform: translate(-140px, 140px); }
+        70% { transform: translate(-180px, 180px); }
+        85%{ transform: translate(-210px,210px);}
+        100% {transform: translate(-250px,250px);}
+    }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+    <div class="circle5"></div>
+    <div class="container">
+    <div class="name">Vaibhav</div>
+    <div class="surname">Sonawane</div>
+    </div>
+</body>
+</html>

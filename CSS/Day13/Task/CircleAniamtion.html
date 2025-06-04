@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CircleAniamtion</title>
+
+    <style>
+        #main{
+            width: 1000px;
+            height: 500px;
+            /* border: 1px solid black; */
+            position: relative;
+        }
+        #id1, #id2, #id3, #id4, #id5{
+            width: 70px;
+            height: 70px;
+            border-radius: 50px;
+            background-color: aquamarine;
+            border: 1px solid black;
+            position: absolute;
+        }
+
+        #id1{
+            background-color: red;
+            top: 0px;
+            left: 0px;
+            animation-name: aniamtion1 5s;
+            /* animation-direction: alternate; */
+            transition: ease 5s;
+        }
+        #id3{
+            background-color: red;
+            top: 0px;
+            left: 500px;
+            animation-name: aniamtion3 5s;
+            animation-direction: alternate;
+            transition: ease 5s;
+        }
+        #id5{
+            background-color: red;
+            top: 0px;
+            left: 1000px;
+            animation-name: aniamtion15 5s;
+            animation-direction: alternate;
+            transition: ease 5s;
+        }
+
+        #id2{
+            background-color: blue;
+            top: 500px;
+            left: 250px;
+            animation-name: aniamtion2 5s;
+            animation-direction: alternate;
+            transition: ease 5s;
+        }
+        #id4{
+            background-color: blue;
+            top: 500px;
+            left: 750px;
+            animation-name: aniamtion4 5s;
+            animation-direction: alternate;
+            transition: ease 5s;
+        }
+
+        @keyframes animation1 
+        {
+            0% {background-color:red; left:0px; top:100px;}
+            25% {background-color:yellow; left:0px; top:200px;}
+            50% {background-color:blue; left:0px; top:300px;}
+            75% {background-color:green; left:0px; top:400px;}
+            100% {background-color:orangered; left:0px; top:500px;}
+        }
+
+        @keyframes animation3 
+        {
+            0% {background-color:red; left:500px; top:100px;}
+            25% {background-color:yellow; left:500px; top:200px;}
+            50% {background-color:blue; left:500px; top:300px;}
+            75% {background-color:green; left:500px; top:400px;}
+            100% {background-color:orangered; left:500px; top:500px;}
+        }
+
+        @keyframes animation5 
+        {
+            0% {background-color:red; left:1000px; top:100px;}
+            25% {background-color:yellow; left:1000px; top:200px;}
+            50% {background-color:blue; left:1000px; top:300px;}
+            75% {background-color:green; left:1000px; top:400px;}
+            100% {background-color:orangered; left:1000px; top:500px;}
+        }
+
+        @keyframes animation2
+        {
+            0% {background-color:blue; left:250px; top:500px;}
+            25% {background-color:yellow; left:250px; top:400px;}
+            50% {background-color:red; left:250px; top:300px;}
+            75% {background-color:green; left:250px; top:200px;}
+            100% {background-color:orangered; left:250px; top:100px;}
+        }
+
+        @keyframes animation4
+        {
+            0% {background-color:blue; left:750px; top:500px;}
+            25% {background-color:yellow; left:750px; top:400px;}
+            50% {background-color:red; left:750px; top:300px;}
+            75% {background-color:green; left:750px; top:200px;}
+            100% {background-color:orangered; left:750px; top:100px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="id1"></div>
+        <div id="id2"></div>
+        <div id="id3"></div>
+        <div id="id4"></div>
+        <div id="id5"></div>
+    </div>
+</body>
+</html>

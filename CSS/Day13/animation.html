@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      h1 {
+        color: red;
+        text-align: center;
+        animation: myaniamtion 10s; /* 2-cycle || infinite*/
+        animation-direction: alternate;
+        transition: ease 5s;
+      }
+
+      @keyframes myaniamtion {
+        /* from { color: blue; font-size: 65px; }
+        to { color: brown; font-size: 45px;} */
+
+        /* 0%{color: blue; font-size: 70px; background-color: purple;}
+        25%{color: purple; font-size: 60px; background-color: green;}
+        50%{color: green; font-size: 50px; background-color: orangered;}
+        75%{color: orangered; font-size: 40px; background-color: yellow;}
+        100%{color: yellow; font-size: 30px; background-color: blue;} */
+
+        0%{color: blue; font-size: 70px; border:1px solid purple;}
+        25%{color: purple; font-size: 60px; border:1px solid green;}
+        50%{color: green; font-size: 50px; border:1px solid orangered;}
+        75%{color: orangered; font-size: 40px; border:1px solid yellow;}
+        100%{color: yellow; font-size: 30px; border:1px solid blue;}
+        
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is Animation Example</h1>
+  </body>
+</html>

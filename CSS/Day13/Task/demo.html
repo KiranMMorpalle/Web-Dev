@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Circle Animation</title>
+  <style>
+    body {
+      background: #f0f0f0;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      position: relative;
+      width: 400px;
+      height: 300px;
+    }
+
+    .circle {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #3498db;
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+
+    /* Position circles horizontally */
+    .circle:nth-child(1) { left: 0; animation-name: upDown; }
+    .circle:nth-child(2) { left: 80px; animation-name: downUp; }
+    .circle:nth-child(3) { left: 160px; animation-name: upDown; }
+    .circle:nth-child(4) { left: 240px; animation-name: downUp; }
+    .circle:nth-child(5) { left: 320px; animation-name: upDown; }
+
+    @keyframes upDown {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(100px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes downUp {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-100px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+</body>
+</html>

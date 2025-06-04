@@ -1,0 +1,9 @@
+
+
+selectors :
+
+- tag        (h2)
+- id         (#a)      (unique: only one allowed)    id="a1" || id="a1 b1" xxx
+- class      (.a)      class="a1" || class="a1 b1" 
+- group      (#a, .b,h2)
+- universal  (*)

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image aniamtion</title>
+
+    <style>
+        img{
+            width: 500px;
+            height: 500px;
+            opacity: 1;
+            animation: imageaniamtion 5s;
+            animation-direction: alternate;
+            transition: ease 5s;
+        }
+
+        @keyframes imageanimation{
+
+            0%{ opacity:1;}
+            25%{ opacity:0.8;}
+            50%{ opacity:0.6;}
+            75%{ opacity:0.4;}
+            100%{ opacity:0.2;}
+        }
+    </style>
+</head>
+<body>
+    <img src="Shiva2.jpg" alt="shiva-image">
+</body>
+</html>

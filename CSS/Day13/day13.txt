@@ -1,0 +1,25 @@
+
+
+=> Transform :
+
+# Translate :
+- To move objects positiion
+- transform : translate (50px, 100px)  => x - y coordinate
+
+---------------------------------------------------------------------------
+# Rotate :
+- used tomrotate objects.
+- transform : rotate (10 deg)  // degree
+- transform : rotateX (10 deg)
+- transform : rotateY (10 deg)
+- transform : rotateZ (10 deg)
+
+---------------------------------------------------------------------------
+
+# Transition :
+- transition
+
+
+=> Aniamtion :
+- from---to 
+- 
