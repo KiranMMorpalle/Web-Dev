@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <h2>Check Result</h2>
+            <label for="">Enter Percentages : </label>
+            <input type="text" id="per">
+
+            <button type="button" onclick="checkPercentage()">Check</button>
+            <h4></h4>
+        </form>
+    </div>
+
+    <script>
+        function checkPercentage(){
+            let per=document.getElementById("per").value;
+
+            while(per>=0 && per<=100){
+                if(per<35){
+                    alert("Fail");
+                    break;
+                }
+                else{
+                    alert("pass");
+                    break;
+                } 
+            }
+            alert("Invalid Percentage..!!");
+        }
+    </script>
+</body>
+</html>

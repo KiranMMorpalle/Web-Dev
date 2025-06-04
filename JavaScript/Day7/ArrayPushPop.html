@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>push :</p>
+        <p id="p1"></p>
+        <p id="p2"></p>
+    </div>
+
+    <div>
+        <p>pop :</p>
+        <p id="p3"></p>
+        <p id="p4"></p>
+
+        <h2>Sort :</h2>
+        <h3 id="bsort">Before : </h3>
+        <h3 id="asort">After : </h3>
+        <h3 id="len">Length : </h3>
+    </div>
+        
+    <script>
+        //push
+        const nums=[1,2,3,4,5];
+        document.getElementById("p1").innerHTML=nums;
+        nums.push(50);
+        document.getElementById("p2").innerHTML=nums;
+
+        //pop
+        const arr=[10,20,30,40];
+        document.getElementById("p3").innerHTML=arr;
+        arr.pop();
+        document.getElementById("p4").innerHTML=arr;
+
+        //concate
+
+        //sort
+        const arrSort=[10,50,2,60,32,44,65,35,22];
+        document.getElementById("bsort").innerHTML+=arrSort;
+        arrSort.sort();
+        document.getElementById("asort").innerHTML+=arrSort;
+        
+        //length
+        document.getElementById("len").innerHTML+=arrSort.length;
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        form{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+  </head>
+<body>
+    
+    <div class="container d-flex justify-content-center text-center">
+        <form>
+            <h3>Arithmatic Operation</h3>
+            <div class="mt-2 mb-3">
+                <label for="n1" class="form-label">Number 1 :</label>
+                <input type="text" class="form-control" id="n1">
+            </div>
+            <div class="mb-3">
+                <label for="n2" class="form-label">Number 2 :</label>
+                <input type="text" class="form-control" id="n2">
+            </div>
+
+            <!-- ans -->
+            <div class="mb-3">
+                <label for="ans" id="ans-lable" class="form-label">Result</label>
+                <input type="text" class="form-control" id="res">
+            </div>
+
+            <div class="mt-3">
+                <button type="button" class="btn btn-primary btn-lg" onclick="add()">+</button>
+                <button type="button" class="btn btn-primary btn-lg" onclick="sub()">-</button>
+                <button type="button" class="btn btn-primary btn-lg" onclick="mul()">*</button>
+                <button type="button" class="btn btn-primary btn-lg" onclick="div()">/</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function add(){
+            let n1=document.getElementById("n1").value;
+            let n2=document.getElementById("n2").value;
+            let ans=parseInt(n1) + parseInt(n2);
+            document.getElementById("ans-lable").innerHTML="Addition";
+            document.getElementById("res").value=ans;
+        }
+
+        function sub(){
+            let n1=document.getElementById("n1").value;
+            let n2=document.getElementById("n2").value;
+            let ans=parseInt(n1) - parseInt(n2);
+            document.getElementById("ans-lable").innerHTML="Subtraction";
+            document.getElementById("res").value=ans;
+        }
+
+        function mul(){
+            let n1=document.getElementById("n1").value;
+            let n2=document.getElementById("n2").value;
+            let ans=parseInt(n1) * parseInt(n2);
+            document.getElementById("ans-lable").innerHTML="Multiplication";
+            document.getElementById("res").value=ans;
+        }
+
+        function div(){
+            let n1=document.getElementById("n1").value;
+            let n2=document.getElementById("n2").value;
+            let ans=parseInt(n1) / parseInt(n2);
+            document.getElementById("ans-lable").innerHTML="Division";
+            document.getElementById("res").value=ans;
+        }
+    </script>
+</body>
+</html>

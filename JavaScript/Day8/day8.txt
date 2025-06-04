@@ -1,0 +1,6 @@
+
+Object :
+
+let a=new Object();
+a.name="Ravi";
+a.Qualification="B.Tech";

@@ -1,0 +1,29 @@
+
+
+<Script>
+    // ######
+    // ####
+    // ### 
+    // ## 
+    // # 
+    // ## 
+    // ### 
+    // #### 
+    // ##### 
+
+    let pos=5;
+    for(let row=1; row<=9; row++)
+    {
+        for(let col=1; col<=pos; col++)
+        {
+            // if(col>=1 && col<=pos)
+                document.write("* ");
+            
+        }
+        document.write("<br>");
+        if(row<5)
+            pos--;
+        else
+            pos++;
+    }
+</Script>

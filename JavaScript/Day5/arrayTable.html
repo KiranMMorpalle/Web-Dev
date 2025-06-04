@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Table</title>
+</head>
+<body>
+
+    <button onclick="add()">Add Employee</button>
+    <button onclick="show()">Show Employees</button>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Emp No</th>
+                <th>Emp Name</th>
+                <th>Salary</th>
+                <th>Dept No</th>
+            </tr>
+        </thead>
+        <tbody id="id1"></tbody>
+    </table>
+
+    <script>
+        let empNo = [];
+        let empName = [];
+        let sal = [];
+        let deptNo = [];
+        let i = 0;
+
+        function add() {
+            empNo[i] = parseInt(prompt("Enter Emp No:"));
+            empName[i] = prompt("Enter Emp Name:");
+            sal[i] = parseInt(prompt("Enter Emp Salary:"));
+            deptNo[i] = parseInt(prompt("Enter Dept No:"));
+            i++;
+        }
+
+        function show() {
+            let tb = document.getElementById("id1");
+            tb.innerHTML = ""; // Clear previous rows
+
+            for (let j = 0; j < i; j++) {
+                let row = `
+                    <tr>
+                        <td>${empNo[j]}</td>
+                        <td>${empName[j]}</td>
+                        <td>${sal[j]}</td>
+                        <td>${deptNo[j]}</td>
+                    </tr>`;
+                tb.innerHTML += row;
+            }
+        }
+    </script>
+
+</body>
+</html>

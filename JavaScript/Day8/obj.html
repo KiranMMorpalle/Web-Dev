@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="fun1()">Click Me</button>
+    <button type="button" onclick="fun2()">Click Me</button>
+
+    <script>
+        function fun1(){
+            let a=new Object();
+
+            a.name="Ravi";
+            a.Qualification="B.Tech";
+            document.write("Name : "+a.name+"<br>"+"Qualification : "+a.Qualification);
+        }
+
+        function fun2(){
+            let a=new Object();
+            let arr=[
+                {name:"Kiran",Qualification:"BE"},
+                {name:"Ravi",Qualification:"B.Tech"},
+                {name:"Kajal",Qualification:"BCA"}
+            ]
+
+            for (let i = 0; i < arr.length; i++) {
+                document.write("Name: " + arr[i].name + ", Qualification: " + arr[i].Qualification+"<br>");
+            }
+        }
+    </script>
+</body>
+</html>
