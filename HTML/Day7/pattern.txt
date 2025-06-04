@@ -1,0 +1,29 @@
+
+The pattern attribute specifies a regular expression that 
+the <input> element's value is checked against on form submission.
+
+Note: The pattern attribute works with the following input types: 
+       { text, date, search, url, tel, email, and password. }
+
+Tip: Use the global "title" attribute to describe the pattern to help the user.
+
+----------------------------
+
+=> Text     : Name, 
+=> Number   : Age, DOB, Mob, Adhar
+=> Email    : text + number + special-char (@ and .)
+=> password : text + number + special-char
+=> Date     : number + " - or / or MAY" + number
+
+[  ]  = expression
+{  }  = range
+
+Example :
+
+[a-zA-Z0-9]{1,4}  = allow all cahr & number upto four length
+
+{1, }     => more than one & max upto --- n
+^\d{10}$  => exact only 10 digit allow (mob,pincode,adhar)
+
+(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}   => atleast ane small char, capital cahr, digit.
+
