@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Radio Button Change Example</title>
+</head>
+<body>
+
+<h3>Select your favorite fruit:</h3>
+
+<label>
+  <input type="radio" id="fruit" name="fruit" value="Apple" onchange="myfun(this)"> Apple
+</label><br>
+
+<label>
+  <input type="radio" id="fruit" name="fruit" value="Banana" onchange="myfun(this)"> Banana
+</label><br>
+
+<p id="result"></p>
+
+<script>
+  function myfun(radio) {
+    let res=document.getElementById("fruit").value;
+    document.getElementById("result").innerText = "You selected: " + res;  //radio.value;
+  }
+</script>
+
+</body>
+</html>
