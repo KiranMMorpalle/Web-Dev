@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #man{
+            float: right;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <img src="man.jpg" alt="" id="man">
+        <img src="myBike.jpg" alt="bike" id="myImg"> <br><br>
+
+        <input type="button" value="Click Me" onclick="moveRight()">
+    </form>
+
+
+    <!--  -->
+
+    <script>
+        let imgObj=null;
+        let obj=null;
+
+        function init(){
+            imgObj=document.getElementById("myImg");
+            imgObj.style.position='relative';
+            imgObj.style.left='0px';
+
+            obj=document.getElementById("man");
+            obj.style.position='relative';
+            obj.style.left='0px';
+        }
+
+        function moveRight(){
+            imgObj.style.left=parseInt(imgObj.style.left)+20+'px';
+            obj.style.left=parseInt(obj.style.left)-20+'px';
+        }
+
+        window.onload=init;
+    </script>
+
+</body>
+</html>

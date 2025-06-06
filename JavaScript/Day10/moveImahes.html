@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Move</title>
+  <style>
+    #man, #myImg {
+      width: 150px; /* adjust as needed */
+      height: auto;
+    }
+
+    #man{
+        float: right;
+    }
+  </style>
+</head>
+<body>
+  <form action="">
+    <img src="man.jpg" alt="man" id="man">
+    <img src="myBike.jpg" alt="girl" id="myImg"> <br><br>
+    <input type="button" value="Click Me" onclick="moveImages()">
+  </form>
+
+  <script>
+    let imgLeft = null;
+    let imgRight = null;
+
+    function init() {
+      imgLeft = document.getElementById("myImg"); // girl image
+      imgRight = document.getElementById("man");  // man image
+
+      // Initialize positions
+      imgLeft.style.position = "relative";
+      imgLeft.style.left = "0px";
+
+      imgRight.style.position = "relative";
+      imgRight.style.left = "0px"; // we'll move it negative to go left
+    }
+
+    function moveImages() {
+      // Move girl to the right
+      imgLeft.style.left = parseInt(imgLeft.style.left) + 20 + "px";
+
+      // Move man to the left
+      imgRight.style.left = parseInt(imgRight.style.left) - 20 + "px";
+    }
+
+    window.onload = init;
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div onmousemove="fun1(event)" onmouseout="fun2()"></div>
+    <p id="demo"></p>
+
+    <!-- Note : The event object is often implicitly available in inline HTML event handlers
+    like onclick="func()", but it's a good practice to explicitly pass it (like
+    onclick="func(event)") to ensure clarity and avoid issues in some browsers. -->
+
+    <!-- //onselect event -->
+    <input type="text" value="Hello World!" onselect="myfun()">
+    
+    <!-- Note : only work on input text
+    <h2 >bfdbdf</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, officiis.</p> -->
+    <script>
+      function fun1(e) {
+        let x = event.clientX;
+        let y = event.clientY;
+        let coor = "Coordinates : (" + x + "," + y + ")";
+        document.getElementById("demo").innerHTML = coor;
+      }
+
+      function fun2() {
+        document.getElementById("demo").innerHTML = "";
+      }
+      
+
+      //
+      function myfun(){
+        alert("You selected some text.");
+        console.log("Selected some text.");
+      }
+    </script>
+  </body>
+</html>

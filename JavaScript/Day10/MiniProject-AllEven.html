@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Creator</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    #preview img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+    .hover-box {
+      background-color: lightblue;
+      padding: 10px;
+      margin-top: 20px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Create Your Profile</h2>
+<form id="profileForm" onsubmit="return handleSubmit(event)">
+  <label>Name: <input type="text" id="name" oninput="updateLiveName()" onselect="textSelected()"></label><br><br>
+
+  <label>Password: <input type="password" id="password"></label>
+  <button type="button" onclick="togglePassword()">Show/Hide</button><br><br>
+
+  <label>Upload Profile Image:
+    <input type="file" accept="image/*" onchange="previewImage(event)">
+  </label><br><br>
+
+  <label>Bio (press any key):<br>
+    <textarea id="bio" onkeydown="keyPressed(event)"></textarea>
+  </label><br><br>
+
+  <input type="submit" value="Create Profile">
+</form>
+
+<hr>
+
+<h3>Live Preview</h3>
+<div id="preview">
+  <p><strong>Name:</strong> <span id="liveName"></span></p>
+  <img id="profilePic" src="" alt="Image Preview">
+</div>
+
+<div class="hover-box" onmouseover="hoverOn()" onmouseout="hoverOff()">
+  Hover over me!
+</div>
+
+<p id="status"></p>
+
+<script>
+  function updateLiveName() {
+    document.getElementById("liveName").textContent = document.getElementById("name").value;
+  }
+
+  function togglePassword() {
+    const passField = document.getElementById("password");
+    passField.type = passField.type === "password" ? "text" : "password";
+  }
+
+  function previewImage(event) {
+    const img = document.getElementById("profilePic");
+    img.src = URL.createObjectURL(event.target.files[0]);
+  }
+
+  function keyPressed(e) {
+    document.getElementById("status").textContent = "Key Pressed: " + e.key;
+  }
+
+  function textSelected() {
+    document.getElementById("status").textContent = "Text selected in Name field.";
+  }
+
+  function hoverOn() {
+    document.getElementById("status").textContent = "You're hovering over the box.";
+  }
+
+  function hoverOff() {
+    document.getElementById("status").textContent = "You left the box.";
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault(); // prevent actual form submit
+    const name = document.getElementById("name").value.trim();
+    const pass = document.getElementById("password").value;
+
+    if (name === "" || pass === "") {
+      alert("Please fill out all fields!");
+      return false;
+    }
+
+    alert("Profile Created Successfully!");
+    return true;
+  }
+</script>
+
+</body>
+</html>
