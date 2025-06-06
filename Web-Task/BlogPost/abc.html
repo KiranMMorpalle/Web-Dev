@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog Post</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.8;
+      background-color: #f9f9f9;
+    }
+    .blog-container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .cover-img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .comment-box {
+      margin-top: 40px;
+    }
+    .comment-box textarea {
+      resize: vertical;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container blog-container">
+    <h1 class="mb-1">The Art of Mindful Living</h1>
+    <p class="text-muted">By <strong>Jane Doe</strong> | Published on June 6, 2025</p>
+
+    <img src="https://via.placeholder.com/800x400" alt="Cover Image" class="cover-img">
+
+    <h3>Introduction</h3>
+    <p>Mindfulness is the practice of being present and fully engaged with whatever we're doing at the moment — free from distraction or judgment, and aware of our thoughts and feelings without getting caught up in them.</p>
+
+    <h3>Benefits of Mindful Living</h3>
+    <p>Practicing mindfulness helps reduce stress, improve mental clarity, and enhance overall well-being. It allows us to respond thoughtfully to situations rather than react impulsively.</p>
+
+    <h3>How to Get Started</h3>
+    <p>Start with short meditation sessions, practice deep breathing, and pay attention to your daily routines. Mindfulness isn't something you achieve overnight — it's a lifelong journey.</p>
+
+    <h3>Conclusion</h3>
+    <p>Incorporating mindfulness into your life can transform the way you experience the world. Take the first step today by simply being present and aware of this moment.</p>
+
+    <!-- Comment Section -->
+    <div class="comment-box">
+      <h4>Leave a Comment</h4>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Your name">
+        </div>
+        <div class="mb-3">
+          <label for="comment" class="form-label">Comment:</label>
+          <textarea class="form-control" id="comment" rows="4" placeholder="Write your comment here..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Post Comment</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
