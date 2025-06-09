@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hover to Move Image</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    img {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<img src="./rat.png" alt="Moving Image" id="moveImg">
+
+<script>
+  const img = document.getElementById("moveImg");
+
+  function moveImageRandomly() {
+    const maxX = window.innerWidth - img.offsetWidth;
+    const maxY = window.innerHeight - img.offsetHeight;
+
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+
+    img.style.left = randomX + "px";
+    img.style.top = randomY + "px";
+  }
+
+  // Move image on every hover
+  img.addEventListener("mouseenter", moveImageRandomly);
+</script>
+
+</body>
+</html>

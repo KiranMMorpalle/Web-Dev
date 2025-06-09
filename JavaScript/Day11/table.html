@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="func()">Create Table</button>
+    <h1 id="p1"></h1>
+    <h2 id="abc">ravi</h2>
+
+    <script>
+        function func()
+        {
+            let row=parseInt(prompt("Enter row :"));
+            let col=parseInt(prompt("Enter col :"));
+            let tb=document.createElement("table");
+
+            for(let i=1; i<=row; i++){
+                let trow=document.createElement("tr");
+
+                for(let j=1; j<=col; j++){
+                    const cell=document.createElement("td");
+                    const celltext= document.createTextNode(`${i}`);
+
+                    cell.appendChild(celltext);
+                    trow.appendChild(cell);
+
+                    if((i+j)%2==0)
+                        cell.setAttribute("bgcolor","black");
+                    else
+                        cell.setAttribute("bgcolor","white");
+                }
+                tb.appendChild(trow);
+
+                
+
+            }
+
+            p1.appendChild(tb);   //
+            tb.setAttribute("border","1");
+            tb.setAttribute("cellpadding","5");
+            tb.setAttribute("align","center");
+            //tb.setAttribute("bgcolor","pink");
+
+
+            abc.textContent="Ram";
+            abc.style.color="red";
+            
+        }
+    </script>
+</body>
+</html>
