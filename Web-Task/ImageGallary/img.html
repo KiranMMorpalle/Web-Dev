@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Image Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container my-5">
+  <h2 class="mb-4 text-center">Responsive Image Gallery</h2>
+  <div class="row g-4">
+
+    <!-- Gallery Item -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card">
+        <img src="laptop1.jpg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="laptop1.jpg" alt="Image 1">
+        <div class="card-body text-center">
+          <p class="card-text">Caption for Image 1</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat for other images -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card">
+        <img src="tech1.jpg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="tech1.jpg" alt="Image 1">
+        <div class="card-body text-center">
+          <p class="card-text">Caption for Image 2</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add 4–6 more as needed -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card">
+        <img src="laptop2.jpg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="laptop2.jpg" alt="Image 1">
+        <div class="card-body text-center">
+          <p class="card-text">Caption for Image 3</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card">
+        <img src="tech2.jpg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="tech2.jpg" alt="Image 1">
+        <div class="card-body text-center">
+          <p class="card-text">Caption for Image 4</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more images as needed -->
+    <!-- Gallery Item -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card">
+        <img src="laptop3.jpg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="laptop3.jpg" alt="Image 1">
+        <div class="card-body text-center">
+          <p class="card-text">Caption for Image 1</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat for other images -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card">
+        <img src="tech3.jpg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="tech3.jpg" alt="Image 1">
+        <div class="card-body text-center">
+          <p class="card-text">Caption for Image 2</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add 4–6 more as needed -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card">
+        <img src="laptop4.jpg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="laptop4.jpg" alt="Image 1">
+        <div class="card-body text-center">
+          <p class="card-text">Caption for Image 3</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card">
+        <img src="tech4.jpg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="tech4.jpg" alt="Image 1">
+        <div class="card-body text-center">
+          <p class="card-text">Caption for Image 4</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0">
+        <img src="" id="modalImage" class="img-fluid w-100" alt="Large Image">
+        <h3>Large Image</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // JavaScript to update modal image
+  const modalImage = document.getElementById('modalImage');
+  const imageModal = document.getElementById('imageModal');
+
+  document.querySelectorAll('[data-bs-toggle="modal"]').forEach(img => {
+    img.addEventListener('click', () => {
+      const fullImg = img.getAttribute('data-bs-img');
+      modalImage.src = fullImg;
+    });
+  });
+</script>
+
+</body>
+</html>
