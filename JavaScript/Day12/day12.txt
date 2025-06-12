@@ -1,0 +1,22 @@
+Add elements & events :
+
+document.createElement("div")
+document.appendChild("p")
+document.createTextNode("Welcome")
+
+btn.innerHTML="Click Me";
+
+d1.appendChild(btn);
+
+document.body.appendChild(d1);
+d1.setAttribute("class","c1");
+
+document.getElementById("btn").addEventListener("click",fun);
+
+addEventListener("click",fun);   // takes 2 parameter
+
+-----------------------------------------------------------------------
+Set & clearInterval :
+
+setInterval(fun,1000);
+clearInterval(interval); 

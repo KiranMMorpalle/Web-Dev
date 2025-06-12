@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .c1{
+            border: 2px solid red;
+            height: 150px;
+            width: 300px;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button type="button" id="btn">Click Me</button>
+
+    <script>
+        document.getElementById("btn").addEventListener("click",fun);
+
+
+        function fun(){
+            let d1=document.createElement("div");
+            let para=document.createElement("p");
+            let btn=document.createElement("button");
+            let text=document.createTextNode("Welcome");
+
+            btn.innerHTML="Click Me";
+            para.innerHTML="This is new para";
+
+            d1.appendChild(text);
+            d1.appendChild(para);
+            d1.appendChild(btn);
+           
+            document.body.appendChild(d1);
+            d1.setAttribute("class","c1");
+        }
+    </script>
+</body>
+</html>

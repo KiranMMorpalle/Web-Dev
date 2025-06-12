@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form name="f1" action="success.html" onsubmit="return sub1()">
+        
+        <label for="uname">Enter User Name</label> <br>
+        <input type="text" name="uname" onkeyup="key1()" onfocus="fun()" onblur="fun1()" autocomplete="off"> <br>
+
+        <p id="err"></p>
+        <p id="err1"></p>
+
+        <label for="email">Enter email Id</label> <br>
+        <input type="email" name="email" autocomplete="off"> <br>
+
+        <label for="pass">Enter Password</label> <br>
+        <input type="password" name="pass" autocomplete="off"> <br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+
+
+
+    <script>
+        
+        function fun(){
+            var count=0;
+            f1.uname.style.border="2px solid black";
+            if(count==0){
+                err.innerHtml("Enter Username.");
+                err.style.color="green";
+            }
+            else{
+                err.innerHtml("Enter Valid Username.");
+                err.style.color="red";
+            }
+            count++;
+        }
+
+        function fun1(){
+            let pat=`(^[A-Z]{1,1})+([a-z]{1,10})$`
+            let user=f1.uname.value;
+
+            if(user.match(pat)){
+                err1.innerHtml="<img src='correct.jpg' width='30px' height='30px'>";
+                err.innerHtml="";
+                f1.email.focus();
+            }
+            else{
+                err1.innerHTML="";
+                err.style.color="red";
+                f1.uname.value="";
+                f1.uname.focus();
+            }
+        }
+
+        function key1(){
+            err.innerHtml="";
+        }
+
+        function sub1(){
+            var user = f1.uname.value;
+            var pat ='(^[A-Z]{1,1})+([a-z]{1,10})$'
+
+            if(user==""){
+                err.innerHTML="Please fill user Name";
+                err.style.color="red";
+                return false;
+            }
+            
+            if(!user.match(pat))
+            {
+                f1.uname.focus();
+                return false;
+            }
+        }
+
+    </script>
+</body>
+</html>

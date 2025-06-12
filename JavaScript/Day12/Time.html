@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button type="button" onclick="start()">Start Time</button>
+    <button type="button" onclick="stop()">Stop Time</button>
+
+    <h3 id="p1"></h3>
+
+
+    <script>
+        var interval;
+        function start(){
+            interval=setInterval(fun,1000);  //
+        }
+
+        function fun(){
+            time=new Date();
+            document.getElementById("p1").innerHTML=time.toLocaleTimeString();
+        }
+
+        function stop(){
+            clearInterval(interval);   //
+        }
+    </script>
+</body>
+</html>
