@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .todo-container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 25px;
+      }
+
+      .input-section {
+        display: flex;
+        margin-bottom: 20px;
+      }
+
+      #todo-input {
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      #add-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 10px;
+        font-size: 16px;
+        transition: background-color 0.2s;
+      }
+
+      #add-button:hover {
+        background-color: #0056b3;
+      }
+
+      #todo-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      #todo-list li {
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        padding: 12px;
+        margin-bottom: 8px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.2s;
+      }
+
+      #todo-list li.completed {
+        text-decoration: line-through;
+        color: #888;
+        background-color: #e0e0e0;
+      }
+
+      #todo-list li:hover {
+        background-color: #f0f0f0;
+      }
+
+      .delete-button {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 12px;
+        margin-left: 10px;
+        transition: background-color 0.2s;
+      }
+
+      .delete-button:hover {
+        background-color: #c82333;
+      }
+
+      .complete-button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 12px;
+        margin-right: 5px;
+        transition: background-color 0.2s;
+      }
+
+      .complete-button:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <!-- ------------------------------HTML------------------------------------------------ -->
+
+    <div class="todo-container">
+      <h1>My To-Do List</h1>
+      <div class="input-section">
+        <input type="text" id="todo-input" placeholder="Add a new to-do..." />
+        <button id="add-button">Add To-Do</button>
+      </div>
+      <ul id="todo-list"></ul>
+    </div>
+
+    <!-- -------------------------------JS----------------------------------------------- -->
+
+    <script>
+      // 1. Select the necessary elements using querySelector
+      const todoInput = document.querySelector("#todo-input"); // Selects the input field by its ID
+      const addButton = document.querySelector("#add-button"); // Selects the button by its ID
+      const todoList = document.querySelector("#todo-list"); // Selects the ul (unordered list) by its ID
+
+      // 2. Add an event listener to the "Add To-Do" button
+      addButton.addEventListener("click", addTodo);
+
+      // Optional: Allow adding with Enter key
+      todoInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          addTodo();
+        }
+      });
+
+      function addTodo() {
+        const todoText = todoInput.value.trim(); // Get the value from the input and remove whitespace
+
+        if (todoText === "") {
+          alert("Please enter a to-do item!");
+          return; // Stop if input is empty
+        }
+
+        // 3. Create new list item (li) for the to-do
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `
+        <span>${todoText}</span>
+        <div>
+            <button class="complete-button">Complete</button>
+            <button class="delete-button">Delete</button>
+        </div>
+    `;
+
+        // 4. Append the new list item to the to-do list (ul)
+        todoList.appendChild(listItem);
+
+        // 5. Clear the input field after adding
+        todoInput.value = "";
+
+        // 6. Add event listeners for the new "Complete" and "Delete" buttons
+        const completeButton = listItem.querySelector(".complete-button"); // Selects the button within the new listItem
+        const deleteButton = listItem.querySelector(".delete-button"); // Selects the button within the new listItem
+
+        completeButton.addEventListener("click", function () {
+          listItem.classList.toggle("completed"); // Toggles the 'completed' class for styling
+        });
+
+        deleteButton.addEventListener("click", function () {
+          todoList.removeChild(listItem); // Removes the list item from the ul
+        });
+      }
+    </script>
+  </body>
+</html>

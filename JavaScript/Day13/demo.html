@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn" type="button">I am button</button>
+    <p id="para">I am JavaScript</p>
+
+    <script>
+        var btn=document.getElementById("btn");
+        btn.addEventListener("click",fun);
+
+        function fun(){
+            var para=document.getElementById("para");
+            para.style.color="red";
+            para.style.fontSize="30px";
+        }
+    </script>
+</body>
+</html>
