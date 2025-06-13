@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Validated Form</title>
+  <style>
+    body, html {
+      margin: 0px;
+      background-color: rgb(211,211,211);
+    }
+    #form {
+      width: 40%;
+      background-color: gray;
+      margin: 10% auto;
+      padding: 10px;
+    }
+    input[type=text], [type=email], [type=number], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type=submit] {
+      width: 100%;
+      background-color: gray;
+      color: white;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 20px;
+      font-family: cursive;
+    }
+    input[type=submit]{
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="form">
+    <form name="registration" onsubmit="return validation();">
+      <fieldset>
+        <legend style="text-align:center;">Personal Detail</legend>
+        <label>First Name:</label>
+        <input type="text" placeholder="First Name" name="fname" />
+        
+        <label>Last Name:</label>
+        <input type="text" placeholder="Last Name" name="lname" />
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter Email" name="email" />
+
+        <label>Password:</label>
+        <input type="text" placeholder="Enter Password" name="password" />
+
+        <label>Age:</label>
+        <input type="number" placeholder="Enter Age" name="age" />
+
+        <label>Gender:</label>
+        <select name="gname">
+          <option selected value="Default">Select</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+
+        <label>Contact Number:</label>
+        <input type="text" placeholder="Mobile Number" name="number" />
+
+        <input type="submit" value="Submit"/>
+      </fieldset>
+    </form>
+  </div>
+
+  <script>
+    function validation() {
+      const fname = document.registration.fname;
+      const lname = document.registration.lname;
+      const email = document.registration.email;
+      const pass = document.registration.password;
+      const age = document.registration.age;
+      const gname = document.registration.gname;
+      const number = document.registration.number;
+
+      if (
+        allLettername(fname) &&
+        allLetterlast(lname) &&
+        checkEmail(email) &&
+        checkPass(pass) &&
+        checkAge(age) &&
+        genderselect(gname) &&
+        Mobile(number)
+      ) {
+        alert("✅ Form successfully submitted!");
+        return true;
+      }
+
+      return false;
+    }
+
+    function allLettername(input) {
+      const letters = /^[A-Za-z]+$/;
+      if (input.value.trim() === "") {
+        alert("Please enter first name");
+        input.focus();
+        return false;
+      } else if (!input.value.match(letters)) {
+        alert("First name must contain only letters");
+        input.focus();
+        return false;
+      }
+      return true;
+    }
+
+    function allLetterlast(input) {
+      const letters = /^[A-Za-z]+$/;
+      if (input.value.trim() === "") {
+        alert("Please enter last name");
+        input.focus();
+        return false;
+      } else if (!input.value.match(letters)) {
+        alert("Last name must contain only letters");
+        input.focus();
+        return false;
+      }
+      return true;
+    }
+
+    function checkEmail(input) {
+      const pattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+      if (input.value.trim() === "") {
+        alert("Please enter your email");
+        input.focus();
+        return false;
+      } else if (!input.value.match(pattern)) {
+        alert("Please enter a valid email");
+        input.focus();
+        return false;
+      }
+      return true;
+    }
+
+    function checkPass(input) {
+      const pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+      if (input.value.trim() === "") {
+        alert("Please enter your password");
+        input.focus();
+        return false;
+      } else if (!input.value.match(pattern)) {
+        alert("Password must be at least 8 characters and include uppercase, lowercase, number, and special character");
+        input.focus();
+        return false;
+      }
+      return true;
+    }
+
+    function checkAge(input) {
+      const age = parseInt(input.value);
+      if (!age || age < 18 || age > 100) {
+        alert("Age must be between 18 and 100");
+        input.focus();
+        return false;
+      }
+      return true;
+    }
+
+    function genderselect(select) {
+      if (select.value === "Default") {
+        alert("Please select your gender");
+        select.focus();
+        return false;
+      }
+      return true;
+    }
+
+    function Mobile(input) {
+      const pattern = /^[0-9]{10}$/;
+      if (input.value.trim() === "") {
+        alert("Please enter contact number");
+        input.focus();
+        return false;
+      } else if (!input.value.match(pattern)) {
+        alert("Contact number must be exactly 10 digits");
+        input.focus();
+        return false;
+      }
+      return true;
+    }
+  </script>
+
+</body>
+</html>
