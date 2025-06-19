@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    
+    <select id="">
+        <option>India</option>
+        <option>USA</option>
+        <option>Pakistan</option>
+        <option>Germany</option>
+        <option>Iran</option>
+    </select>
+    <script>
+        function show(){
+            var a=$("select").val();
+            alert(a);
+        }
+
+        $("select").change(show);
+    </script>
+</body>
+</html>

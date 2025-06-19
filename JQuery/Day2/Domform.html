@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <p id="a">Welcome</p>
+    <button id="btn1">Click Me</button> <br> <br>
+
+    <input type="text" id="b"> <br> <br>
+    <button id="btn2">Click Me</button>
+
+    <p>Lets see the futute together.</p>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#btn1").click(function(){
+                //alert($("#a").text());
+
+                $("p").hide(5000);
+                alert("The paragraph is not hidden.");
+            });
+
+            $("#btn2").click(function(){
+                alert("Hello"+" "+$("#b").val());
+            });
+        });
+    </script>
+</body>
+</html>
