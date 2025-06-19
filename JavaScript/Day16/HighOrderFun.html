@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Function</title>
+</head>
+<body>
+    <button onclick="spark(hello)">Click</button> 
+    <button onclick="mapdemo()">Map</button> 
+    <button onclick="filterdemo()">Filter</button> 
+    <button onclick="reducedemo()">Reduce</button>      
+
+    <button onclick="func()">for-Each</button>      
+
+
+
+    <!-- not need to add () for fun as argument -->
+    
+    <script>
+        function hello(name){
+            return "hello" +" "+ name;
+        }
+
+        function spark(abc){
+            let name="Ravi";
+
+            console.log(abc(name));
+            document.write(abc(name));
+        }
+
+
+        //map() - crreate new array with aslo process.
+        function mapdemo(){
+            const nums=[1,2,3,4,5];
+
+            const squares=nums.map(num=> num*num);    //value-inedx-array
+            console.log(squares);
+            // document.write(squares);
+        }
+
+
+        //
+        function filterdemo(){
+            const age=[15,65,45,21,64,3,17];
+
+
+        }
+
+        function filterdemo(){
+            const library=[
+                {"Author : AP , Title : Advait, Available : Yes"},
+                {"Author : AP , Title : Advait, Available : Yes"},
+                {"Author : AP , Title : Advait, Available : Yes"}
+            ];
+
+
+        }
+
+        //
+        function reducedemo(){
+            const price=[10,20,30];
+            const total=price.reduce((s,price)=>s+price,1);
+
+            console.log(total);  //60
+            
+        }
+
+        //for each
+        function func()
+        {
+            const students=["Kiran","Akash","Ravi"];
+            students.forEach(myFunc);
+
+            function myFunc(item){
+                console.log(item);
+            }
+        }
+
+
+    </script>
+</body>
+</html>
