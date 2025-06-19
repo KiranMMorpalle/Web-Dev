@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+    <button onclick="fun1()">Click Me</button>
+
+    <script>
+        function fun1(){
+
+            var objArr=[
+                {
+                    "Name" : "Ravi",
+                    "Mob" : "8805769295"
+                },
+                {
+                    "Name" : "Kiran",
+                    "Mob" : "7219739468"
+                }
+            ];
+
+            for(var temp of objArr){
+                //alert(temp.Name +" "+ temp.Mob);
+                
+                document.write(temp.Name +" "+ temp.Mob+"</br>");
+            }
+        }
+    </script>
+</body>
+</html>
