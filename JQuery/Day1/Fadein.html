@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        div{
+            display: none;
+            width: 300px;
+            height: 300px;
+        }
+        #div1{
+            background-color: rgb(86, 180, 187);
+        }
+        #div2{
+            background-color: rgb(151, 97, 31);
+        }
+        #div3{
+            background-color: rgb(64, 189, 75);
+        }
+    </style>
+  </head>
+  <body>
+    <button>Click</button>
+    <div id="div1">
+      <h4>Div1</h4>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime vel
+        quibusdam dicta pariatur repellat praesentium culpa asperiores, sed
+        commodi error minus quaerat perferendis veritatis dolor velit, quam
+        excepturi voluptatem nihil.
+      </p>
+    </div>
+    <div id="div2">
+      <h4>Div2</h4>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime vel
+        quibusdam dicta pariatur repellat praesentium culpa asperiores, sed
+        commodi error minus quaerat perferendis veritatis dolor velit, quam
+        excepturi voluptatem nihil.
+      </p>
+    </div>
+    <div id="div3">
+      <h4>Div3</h4>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime vel
+        quibusdam dicta pariatur repellat praesentium culpa asperiores, sed
+        commodi error minus quaerat perferendis veritatis dolor velit, quam
+        excepturi voluptatem nihil.
+      </p>
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("div").fadeIn();
+            });
+        });
+    </script>
+  </body>
+</html>

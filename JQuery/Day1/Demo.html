@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery-Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style> 
+        #panel, #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: #e5eecc;
+        border: solid 1px #c3c3c3;
+        }
+
+        #panel {
+        padding: 50px;
+        display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>This is heading tag.</h2>
+    <p>This is paragraph tag</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="btn3">Toggle</button>
+    <hr>
+
+    <!-- Apply css through Jquery  : First & Last element -->
+    <div>
+        <p>First Paragraph</p>
+        <p>Second Paragraph</p>
+        <p>Third Paragraph</p>
+        <p>Last Paragraph</p>
+        <button id="btn4">CSS</button>
+    </div>
+
+    <hr>
+    <!-- ------------- -->
+    <div>
+        <p>List 1 : </p>
+        <ul>
+            <li>Coffee</li>
+            <li>Milk</li>
+            <li>Tea</li>
+        </ul>
+        <p>List 2 : </p>
+        <ul>
+            <li>Coffee</li>
+            <li>Lemon Tea</li>
+            <li>Honey Tea</li>
+        </ul>
+
+        <button id="list-hide">List Iteam Hide</button>
+    </div>
+    <!-- --------------- -->
+
+    <hr>
+    <!-- Slideup -->
+     <div>
+        <h2 id="a">Ram</h2>
+        <h2 id="b">Ajay</h2>
+        <h2 id="c" style="display: none;">Adinath</h2>   <!--Display : none   if wann slideup-->
+        <button id="sup">Slide Up</button>
+        <button id="sdown">Slide Down</button>
+     </div>
+
+    <hr>
+    <div id="flip">Click to slide the panel down or up</div>
+    <div id="panel">Hello world!</div>
+
+     <!-- --------------------- -->
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                // $("p").hide();
+                $("p:first").hide();
+                alert("Content hide.");
+            });
+
+            $("#show").click(function(){
+                $("p").show();
+                alert("Content Show.");
+            });
+
+            $("#btn3").click(function(){
+                $("p").toggle();   //.toggle(5000)  -> speed: slow/fast/mlsec time to hide
+                alert("Content hide & Show");
+            });
+
+            // Apply css through Jquery
+
+            $("#btn4").click(function(){
+                $("div p").first().css({"background-color":"yellow","color":"blue", "font-size" : "30px"});
+            
+                $("div p").last().css({"background-color" : "grey", "color" : "red", "font-size" : "25px"});
+            });
+
+            //hide list item
+            $("#list-hide").click(function(){
+                // $("ul:first").hide();             //hide 1st list
+                $("ul li:first").hide();            //hide 1st ul-1st li
+            });
+            
+
+            //-------slide up & down-------
+            $("#sup").click(function(){
+                $("#a").slideUp();
+                $("#b").slideUp("slow");      //slow/fast/mlsec
+                $("#c").slideUp(3000);
+            });
+
+            $("#sdown").click(function(){
+                // $("#a").slideDown();
+                // $("#b").slideDown("slow");
+                $("#c").slideDown(3000);        //Display : none   if wann slideu
+            });
+
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+
+        });
+
+        
+       
+
+    </script>
+</body>
+</html>
