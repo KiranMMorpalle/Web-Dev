@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>First</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <style>
+      /* Full height for carousel slides */
+.hero-slide {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-slide .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.carousel-caption {
+  z-index: 2;
+  /* text-shadow: 1px 1px 5px black; */
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <span>HelpFund</span>
+    </a>
+    <button class="btn btn-light ms-auto" data-bs-toggle="modal" data-bs-target="#loginModal">Login / Signup</button>
+  </div>
+</nav>
+
+<!-- Fullscreen Carousel -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <div class="carousel-item active hero-slide" style="background-image: url('./Images/Hands.jpg');">
+      <div class="overlay"></div>
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+        <h1 class="display-4 fw-bold text-white">“Seeing Eyes and Helping Hands”</h1>
+        <p class="lead text-white">Be a part of someone's hope story.</p>
+        <a href="#" class="btn btn-lg btn-warning mt-3 fw-bold">Start Fundraiser</a>
+      </div>
+    </div>
+
+    <div class="carousel-item hero-slide" style="background-image: url('./Images/bloodDonation.jpg');">
+      <div class="overlay"></div>
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+        <h1 class="display-4 fw-bold text-white">Support. Save. Smile.</h1>
+        <p class="lead text-white">Together, we can change lives.</p>
+        <a href="#" class="btn btn-lg btn-warning mt-3 fw-bold">Start Fundraiser</a>
+      </div>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Login Modal -->
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="loginForm"> <!-- form-->
+        <div class="modal-header">
+          <h5 class="modal-title">Login / Signup</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input type="email" id="email" class="form-control mb-2" placeholder="Email" required>
+          <input type="password" id="password" class="form-control mb-2" placeholder="Password" required>
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // prevent page refresh
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const correctEmail = "abc@gmail.com";
+    const correctPassword = "12345";
+
+    if (email === correctEmail && password === correctPassword) {
+      // Redirect on success
+      window.location.href = "home.html";
+    } else {
+      alert("Invalid email or password!");
+    }
+  });
+</script>
+</body>
+</html>
